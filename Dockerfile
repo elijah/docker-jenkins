@@ -17,3 +17,5 @@ RUN /usr/local/bin/install-plugins.sh docker-plugin docker-slaves docker-build-s
     metrics metrics-diskusage metrics-graphite multiple-scms packer parameterized-trigger pegdown-formatter \
     promoted-builds publish-over-ssh rake ruby ruby-runtime scm-api scm-sync-configuration simple-theme-plugin \
     slack ssh-credentials timestamper token-macro vagrant xshell
+
+RUN echo 2.0 > /usr/share/jenkins/ref/jenkins.install.UpgradeWizard.state
