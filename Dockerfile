@@ -1,6 +1,6 @@
 # Trigger.
 FROM jenkins
-RUN apt-get update; apt-get install groovy
+
 RUN /usr/local/bin/install-plugins.sh docker-plugin docker-slaves docker-build-step bitbucket bitbucket-oauth \
     github github-oauth ghprb github-organization-folder github-branch-source:1.8 workflow-aggregator \ 
     chef-identity chef-tracking uno-choice deployment-notification terraform pipeline-graph-analysis \
