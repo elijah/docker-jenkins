@@ -2,7 +2,7 @@
 FROM jenkins
 
 RUN /usr/local/bin/install-plugins.sh docker-plugin docker-slaves docker-build-step bitbucket bitbucket-oauth \
-    github github-oauth ghprb github-organization-folder github-branch-source:1.8 workflow-aggregator \ 
+    github github-oauth ghprb github-branch-source workflow-aggregator \ 
     chef-identity chef-tracking uno-choice deployment-notification terraform pipeline-graph-analysis \
     workflow-support workflow-job job-dsl git-changelog git-notes tracking-git ansicolor \
     branch-api clone-workspace-scm disk-usage email-ext envinject extended-choice-parameter extensible-choice-parameter \
