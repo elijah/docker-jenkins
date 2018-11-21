@@ -1,5 +1,5 @@
 # Trigger.
-FROM jenkins
+FROM jenkins/jenkins
 
 RUN /usr/local/bin/install-plugins.sh docker-plugin docker-slaves docker-build-step bitbucket bitbucket-oauth \
     github github-oauth ghprb github-branch-source workflow-aggregator \ 
