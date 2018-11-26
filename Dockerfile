@@ -4,7 +4,7 @@ FROM jenkins/jenkins
 RUN /usr/local/bin/install-plugins.sh mailer credentials ssh-credentials script-security matrix-auth matrix-project \ 
     docker-build-step github-pullrequest github-oauth blueocean-github-pipeline \
     github github-branch-source workflow-aggregator pipeline-model-definition pipeline-github github-autostatus \ 
-    uno-choice deployment-notification terraform pipeline-graph-analysis r \
+    deployment-notification terraform pipeline-graph-analysis r \
     workflow-support workflow-job job-dsl git-changelog git-notes tracking-git ansicolor \
     branch-api clone-workspace-scm disk-usage email-ext envinject extended-choice-parameter extensible-choice-parameter \
     git git-client graphiteIntegrator greenballs jquery junit-attachments mask-passwords \
