@@ -1,15 +1,16 @@
 # Trigger.
 FROM jenkins/jenkins
 
-RUN /usr/local/bin/install-plugins.sh docker-plugin docker-slaves docker-build-step \
-    github github-branch-source workflow-aggregator pipeline-model-definition \ 
-    uno-choice deployment-notification terraform pipeline-graph-analysis \
+RUN /usr/local/bin/install-plugins.sh mailer credentials ssh-credentials script-security matrix-auth matrix-project \ 
+    docker-build-step github-pullrequest github-oauth blueocean-github-pipeline \
+    github github-branch-source workflow-aggregator pipeline-model-definition pipeline-github github-autostatus \ 
+    uno-choice deployment-notification terraform pipeline-graph-analysis r \
     workflow-support workflow-job job-dsl git-changelog git-notes tracking-git ansicolor \
     branch-api clone-workspace-scm disk-usage email-ext envinject extended-choice-parameter extensible-choice-parameter \
-    git git-client graphiteIntegrator greenballs jquery junit-attachments mask-passwords mesos \
+    git git-client graphiteIntegrator greenballs jquery junit-attachments mask-passwords \
     metrics metrics-diskusage metrics-graphite multiple-scms packer parameterized-trigger pegdown-formatter \
     promoted-builds publish-over-ssh rake ruby ruby-runtime scm-api simple-theme-plugin \
-    slack ssh-credentials timestamper token-macro vagrant xshell
+    slack hubot-steps timestamper token-macro vagrant xshell
 
 RUN echo 2.0 > /usr/share/jenkins/ref/jenkins.install.UpgradeWizard.state
 
